@@ -71,11 +71,10 @@ async def start(b, m):
                     disable_web_page_preview=True)
                 return
         await m.reply_text(
-            text='🙋 Hey Bruh!!\nI am Instant Telegram File to Link Generator Bot.\n\nSend me any file & see the magic!',
+            text='I am Instant Telegram File to Link Generator Bot.\n\nSend me any file to generate download link!',
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton('Movies Channel', url='https://t.me/StreamersHub'), InlineKeyboardButton('Chat Group', url='https://t.me/StreamersOT')],
-                    [InlineKeyboardButton('Deals Channel', url='https://t.me/TheDealsMaster')]
+                    [InlineKeyboardButton('Contact Admin', url='https://t.me/VJ_Robot')]
                 ]
             ),
             disable_web_page_preview=True
@@ -129,7 +128,7 @@ async def start(b, m):
                                      get_msg.message_id,
                                      file_name)
 
-        msg_text = "Bruh! 😁\nYour Link Generated! 🤓\n\n📂 **File Name:** `{}`\n**File Size:** `{}`\n\n📥 **Download Link:** {}"
+        msg_text = "Your Link Generated! \n\n📂 **File Name:** `{}`\n**File Size:** `{}`\n\n📥 **Download Link:** {}"
         await m.reply_text(
             text=msg_text.format(file_name, file_size, stream_link),
             parse_mode="Markdown",
